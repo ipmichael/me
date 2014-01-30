@@ -1,56 +1,134 @@
-<!DOCTYPE html>
-<html>
-<script>
-	var allowed = prompt("are you allowed to be here?");
-	if(allowed == "yeah"){
-		document.write("Welcome, Master Michael!");
-	}
-	else{
-		document.write("INTRUDER");
-	}
-</script>
-<head>
-<style>
-body{
-	background-color: #d0e4fe;
-}
-h1 {
-	color:red;
-	text-align: center;
-	font-family:"Helvetica";
-}
-h2 {
-	color:blue;
-	text-align: center;
-}
-p {color:green;}
-</style>
-</head>
-	<h1>
-		<strong>Michael's Web Page</strong>
-	</h1>
-	<h2>
-		<img src ="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn1/t1/184485_159289174260309_711350511_n.jpg" alt="intervarsity" width = "200" height = "200">
-	</h2>
-	<script>
-		document.write("hello world!");
-	</script>
-	<body>
-
-	<h2>Learning JavaScript</h2>
-
-	<p id="demo">
-	There is a button.
-	</p>
-
-	<script>
-	function myFunction()
-	{
-	document.getElementById("demo").innerHTML="You pressed the button.";
-	}
+	<!DOCTYPE html>
+	<html>
+	 <script>
+	// 	var allowed = prompt("are you allowed to be here?");
+	// 	if(allowed == "yeah"){
+	// 		document.write("Welcome, Master Michael!");
+	// 	}
+	// 	else{
+	// 		document.write("INTRUDER");
+	// 	}
+	 </script>
+		<head>
+			 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+		</script>
+			<script>
+		$(document).ready(function(){
+		  $("h1").click(function(){
+		    $(this).hide();
+		  });
+		}); 
 	</script>
 
-	<button type="button" onclick="myFunction()">the Button</button>
+	<script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("#div1").fadeToggle(1200);
+			});
+		});
+	</script>
+	
 
-	</body>
-</html>
+	<style>
+	body{
+		background-color: #d0e4fe;
+		text-align: center;
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	}
+	h1 {
+		color:red;
+		text-align: center;
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	}
+	h2 {
+		color:blue;
+		text-align: center;
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	}
+	p {
+		color:green;
+		text-align: center;
+		font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+	}
+
+	div
+{
+border:15px solid transparent;
+width:250px;
+padding:10px 20px;
+}
+
+#round
+{
+-webkit-border-image:url(http://www.fromoldbooks.org/Fournier-ManuelTypographique-VolII/pages/133-Figures-pour-les-Missels-border/133-Figures-pour-les-Missels-border-q100-1928x3374.jpg) 30 30 round; /* Safari 5 */
+-o-border-image:url(http://www.fromoldbooks.org/Fournier-ManuelTypographique-VolII/pages/133-Figures-pour-les-Missels-border/133-Figures-pour-les-Missels-border-q100-1928x3374.jpg) 30 30 round; /* Opera */
+border-image:url(http://www.fromoldbooks.org/Fournier-ManuelTypographique-VolII/pages/133-Figures-pour-les-Missels-border/133-Figures-pour-les-Missels-border-q100-1928x3374.jpg) 30 30 round;
+}
+
+#stretch
+{
+-webkit-border-image:url(http://www.fromoldbooks.org/Fournier-ManuelTypographique-VolII/pages/133-Figures-pour-les-Missels-border/133-Figures-pour-les-Missels-border-q100-1928x3374.jpg) 30 30 stretch; /* Safari 5 */
+-o-border-image:url(http://www.fromoldbooks.org/Fournier-ManuelTypographique-VolII/pages/133-Figures-pour-les-Missels-border/133-Figures-pour-les-Missels-border-q100-1928x3374.jpg) 30 30 stretch; /* Opera */
+border-image:url(http://www.fromoldbooks.org/Fournier-ManuelTypographique-VolII/pages/133-Figures-pour-les-Missels-border/133-Figures-pour-les-Missels-border-q100-1928x3374.jpg) 30 30 stretch;
+}
+	</style>
+	</head>
+		<h1>
+			<strong>Michael's Web Page</strong>
+		</h1>
+
+		
+		<script>
+			document.write("hello world!");
+		</script>
+		<body>
+
+		<h2>Learning to Web Design</h2>
+
+		<p id="demo">
+		There is a button.
+		</p>
+
+		<!-- <p id="waka">
+			WAKA
+		</p> -->
+
+		<script>
+		var num = 0;
+		var num2 = 0;
+		function myFunction()
+		{
+			
+			if(num ==0){
+				document.getElementById("demo").innerHTML="You pressed the button.";
+				num =1;
+			}else{
+				document.getElementById("demo").innerHTML="okay";
+				num = 0;
+			}
+		}
+
+		function colorChange(){
+			x=document.getElementById("waka");
+			if(num2==0){
+				x.style.color="#ff0000";
+				num2=1;
+			}else{
+				x.style.color="#0000cd";
+				num2=0;
+			}
+		}
+		</script>
+
+		<button type="button" onclick="myFunction()">
+			button
+		</button>
+
+<!-- 		<button type="button" onclick="colorChange()">
+			color button
+		</button> -->
+		<h2 id="div1" display:none;>
+			<img src ="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn1/t1/184485_159289174260309_711350511_n.jpg" alt="intervarsity" width = "200" height = "200">
+		</h2>
+		</body>
+	</html>
